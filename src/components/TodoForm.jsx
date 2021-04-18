@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addTodo } from '../redux/todo/todoAction';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTodo } from "../redux/todo/todoAction";
 
 const TodoForm = () => {
   const dispatch = useDispatch();
+
   const [inputValue, setInputValue] = useState({
-    description: '',
-    color: 'var(--amarillo)',
+    description: "",
+    color: "var(--violeta)",
   });
 
   const { description, color } = inputValue;
@@ -20,12 +21,12 @@ const TodoForm = () => {
 
   const handlerSubmit = (e) => {
     e.preventDefault();
-    if (inputValue.description === '') return;
+    if (inputValue.description === "") return;
 
     dispatch(addTodo(inputValue));
 
     setInputValue({
-      description: '',
+      description: "",
       color,
     });
   };
@@ -41,16 +42,8 @@ const TodoForm = () => {
           onChange={handleChange}
           value={description}
         />
-        {/* <input
-          className="form-color"
-          type="color"
-          name="color"
-          style={{ padding: "0" }}
-          onChange={handleChange}
-          value={color}
-        /> */}
         <select
-          // className="form-color"
+          className="form-color"
           type="color"
           name="color"
           style={{ backgroundColor: `${color}` }}
@@ -58,24 +51,20 @@ const TodoForm = () => {
           value={color}
         >
           <option
-            style={{ backgroundColor: 'var(--amarillo)' }}
-            value="yellow"
+            style={{ backgroundColor: "var(--magenta)" }}
+            value="var(--magenta)"
           ></option>
           <option
-            style={{ backgroundColor: 'var(--magenta)' }}
-            value="magenta"
+            style={{ backgroundColor: "var(--verde)" }}
+            value="var(--verde)"
           ></option>
           <option
-            style={{ backgroundColor: 'var(--verde)' }}
-            value="lightblue"
+            style={{ backgroundColor: "var(--violeta)" }}
+            value="var(--violeta)"
           ></option>
           <option
-            style={{ backgroundColor: 'var(--violeta)' }}
-            value="blue"
-          ></option>
-          <option
-            style={{ backgroundColor: 'var(--mostaza)' }}
-            value="orange"
+            style={{ backgroundColor: "var(--mostaza)" }}
+            value="var(--mostaza)"
           ></option>
         </select>
         <button className="btn-form-add" type="submit">

@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 :root {
-  --violeta: #6040f8;
-  --magenta: #e92ff4;
-  --verde: #2bfaea;
+  --violeta: #c3bce4;
+  --magenta: #f0c4f3;
+  --verde: #bce6c5;
   --amarillo: #c8f22f;
-  --mostaza: #f4b11b;
+  --mostaza: #e6cccc;
 }
 
 * {
@@ -305,6 +305,13 @@ body {
 .todo-error-msj {
   font-family: "Poppins";
   color: #ff5858;
+}
+
+.input-edit-mode {
+  background-color: transparent;
+  height: 100% !important;
+  border: none !important;
+  color: #545e6f !important;
 }
 
 /* scrollbar */

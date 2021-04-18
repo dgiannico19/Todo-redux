@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, EDIT_MODE } from "./todoAction";
+import { ADD_TODO, DELETE_TODO, EDIT_MODE, EDIT_TODO } from "./todoAction";
 
 const initialState = [];
 
@@ -17,6 +17,18 @@ export const todoReducer = (state = initialState, action) => {
           return {
             ...todo,
             editMode: !todo.editMode,
+          };
+        }
+        return todo;
+      });
+      return state;
+
+    case EDIT_TODO:
+      state = state.map((todo) => {
+        if (todo.id === action.id) {
+          return {
+            ...todo,
+            description: action.newText,
           };
         }
         return todo;
