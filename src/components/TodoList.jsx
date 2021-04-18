@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 const TodoList = () => {
   const todos = useSelector((data) => data.todo);
   const titulo = todos.length === 0 && (
-    <p style={{ textAlign: "center" }}>No hay tareas asignadas.</p>
+    <p style={{ textAlign: "center" }}>Not tasks assigned.</p>
   );
 
   return (

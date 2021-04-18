@@ -6,7 +6,7 @@ const TodoForm = () => {
   const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState({
     description: "",
-    color: "#000000",
+    color: "#ababc9",
   });
 
   const { description, color } = inputValue;
@@ -26,18 +26,17 @@ const TodoForm = () => {
 
     setInputValue({
       description: "",
-      color: "",
+      color: "#ababc9",
     });
   };
 
   return (
     <>
-      <hr />
       <form className="todos-form" name="todos" onSubmit={handlerSubmit}>
         <input
           className="form-input"
           type="text"
-          placeholder="Agrega una Tarea"
+          placeholder="Add a new task"
           name="description"
           onChange={handleChange}
           value={description}

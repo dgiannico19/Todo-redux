@@ -4,9 +4,9 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        <div className="logo">
-          <div className="logo-ultimate"></div>
-        </div>
+        <h1 className="todo-title">
+          <b>Todo</b>Tasks
+        </h1>
       </header>
     </>
   );
