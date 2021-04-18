@@ -1,6 +1,6 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { deleteTodo, editMode } from "../redux/todo/todoAction";
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { deleteTodo, editMode } from '../redux/todo/todoAction';
 
 const Todo = ({ todo }) => {
   const dispatch = useDispatch();
@@ -28,9 +28,9 @@ const Todo = ({ todo }) => {
       <li
         style={{
           backgroundColor: `${todo.color}`,
-          color: `${todo.color === "#ffffff" ? "#000000" : "#ffffff"}`,
+          color: `${todo.color === '#ffffff' ? '#000000' : '#ffffff'}`,
           textShadow: `${
-            todo.color === "#ffffff" ? null : "0 0 3px #00000094"
+            todo.color === '#ffffff' ? null : '0 0 3px #00000094'
           }`,
         }}
       >
