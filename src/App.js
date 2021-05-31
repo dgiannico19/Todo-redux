@@ -1,10 +1,11 @@
-import Header from "./components/Header.jsx";
-import TodoPages from "./components/TodoPages.jsx";
-import "./App.css";
+import Header from './components/Header.jsx';
+import TodoPages from './components/TodoPages.jsx';
+import GlobalStyle from './styles/GlobalStyles.jsx';
 
 function App() {
   return (
-    <div className="App">
+    <div>
+      <GlobalStyle />
       <Header />
       <TodoPages />
     </div>

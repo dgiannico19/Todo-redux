@@ -1,6 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useDispatch } from "react-redux";
-import { deleteTodo, editMod, editTodo } from "../redux/todo/todoAction";
+import React, { useState, useEffect, useRef } from 'react';
+import { useDispatch } from 'react-redux';
+import { deleteTodo, editMod, editTodo } from '../redux/todo/todoAction';
+
+//importo estilos
+import {
+  TodoLi,
+  EditModeInput,
+  EditTodoBtn,
+  DeleteTodoBtn,
+} from '../styles/styled-component/TodoStyle';
 
 const Todo = ({ todo }) => {
   const dispatch = useDispatch();
@@ -11,7 +19,7 @@ const Todo = ({ todo }) => {
   const handlerEdit = () => dispatch(editMod(todo.id));
 
   const handlerEditTodo = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       dispatch(editTodo(todo.id, inputValue));
       dispatch(editMod(todo.id));
     }
@@ -30,17 +38,15 @@ const Todo = ({ todo }) => {
 
   return (
     <>
-      <li
+      <TodoLi
         style={{
           backgroundColor: `${todo.color}`,
-          color: "black",
         }}
       >
         {todo.editMode ? (
           <span>
-            <input
+            <EditModeInput
               ref={inputRef}
-              className="input-edit-mode"
               type="text"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
@@ -52,13 +58,12 @@ const Todo = ({ todo }) => {
           <span>{todo.description}</span>
         )}
 
-        <button className="btn-todo-edit" type="button" onClick={handlerEdit} />
-        <button
-          className="btn-todo-delete"
+        <EditTodoBtn type="button" onClick={handlerEdit} />
+        <DeleteTodoBtn
           type="button"
           onClick={() => dispatch(deleteTodo(todo.id))}
         />
-      </li>
+      </TodoLi>
     </>
   );
 };

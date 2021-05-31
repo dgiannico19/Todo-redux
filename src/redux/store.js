@@ -1,17 +1,17 @@
-import { createStore, applyMiddleware } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
-import { persistReducer, persistStore } from "redux-persist";
-import storage from "redux-persist/lib/storage";
-import { reducer } from "./combineReducer";
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import { persistReducer, persistStore } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import { reducer } from './combineReducer';
 
 //! agrega middlewares a nuestras acciones
 const middleware = [];
 
 // !configuracion de persistor
 const persistConfig = {
-  key: "root",
+  key: 'root',
   storage: storage,
-  whiteList: ["todo"],
+  whiteList: ['todo'],
 };
 
 const rootReducer = persistReducer(persistConfig, reducer);

@@ -1,37 +1,32 @@
-import React from "react";
-import TodoForm from "./TodoForm.jsx";
-import TodoList from "./TodoList";
-// import { useSelector, useDispatch } from "react-redux";
-// import { deleteComplete } from "../actions/todoActions";
+import React from 'react';
+import styled from 'styled-components';
+import TodoForm from './TodoForm.jsx';
+import TodoList from './TodoList';
+
+const TodosDiv = styled.div`
+  width: 350px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 0 rgba(84, 94, 111, 0.2);
+  padding: 20px;
+`;
+
+const TodosHeaderDiv = styled.div`
+  position: relative;
+  max-height: 350px;
+  overflow: auto;
+`;
 
 const TodoPages = () => {
-  // const dispatch = useDispatch();
-  // const todoList = useSelector((state) => state.todosList);
-  // const completes = todoList.filter((todo) => todo.complete);
-
-  // const handlerCompletes = () => {
-  //   // dispatch(deleteComplete());
-  // };
-
   return (
-    <div className="todos">
-      <div className="todos-header">
+    <TodosDiv>
+      <TodosHeaderDiv>
         <TodoList />
-
-        <div>
-          {/* {completes.length > 0 ? (
-            <button
-              type="button"
-              className="todos-clear"
-              onClick={handlerCompletes}
-            >
-              Borra Completados
-            </button>
-          ) : null} */}
-        </div>
-      </div>
+        <div></div>
+      </TodosHeaderDiv>
       <TodoForm />
-    </div>
+    </TodosDiv>
   );
 };
 

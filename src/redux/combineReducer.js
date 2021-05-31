@@ -1,7 +1,7 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 
 //!reducers
-import { todoReducer } from "./todo/todoReducer";
+import { todoReducer } from './todo/todoReducer';
 
 //! combina todos los reducers
 export const reducer = combineReducers({
