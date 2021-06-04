@@ -44,7 +44,7 @@ const TodoForm = () => {
       <TodosForm name="todos" onSubmit={handlerSubmit}>
         <FormInput
           type="text"
-          placeholder="Add a new task and colour"
+          placeholder="Add a new task"
           name="description"
           onChange={handleChange}
           value={description}
