@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, EDIT_MODE, EDIT_TODO } from './todoAction';
+import { ADD_TODO, DELETE_TODO, EDIT_MODE, EDIT_TODO } from './types';
 
 const initialState = [];
 

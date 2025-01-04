@@ -1,17 +1,14 @@
 import { createGlobalStyle } from 'styled-components';
 
+export const palette = {
+  violeta: '#c3bce4',
+  magenta: '#f0c4f3',
+  verde: '#bce6c5',
+  amarillo: '#c8f22f',
+  mostaza: '#e6cccc',
+};
+
 const GlobalStyle = createGlobalStyle`
-
-
-
-:root {
-  --violeta: #c3bce4;
-  --magenta: #f0c4f3;
-  --verde: #bce6c5;
-  --amarillo: #c8f22f;
-  --mostaza: #e6cccc;
-}
-
 * {
   outline: none;
 }

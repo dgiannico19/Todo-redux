@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { palette } from "../../styles/GlobalStyles";
 
 const style ={
   HeaderBack: styled.header`
@@ -6,7 +7,7 @@ const style ={
   `,
   TodoTitle: styled.h1`
     text-align: center;
-    color: var(--amarillo);
+    color: ${palette.amarillo};
     font-weight: 100;
     font-size: 45px;
     margin-bottom: 0;

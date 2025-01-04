@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { palette } from '../GlobalStyles';
 
 export const TodosForm = styled.form`
   display: grid;
@@ -37,7 +38,7 @@ export const BtnFormAdd = styled.button`
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: var(--amarillo);
+  background-color: ${palette.amarillo};
   color: #00000052;
   box-shadow: 0 3px 12px #0000002c;
   border: transparent solid 1px;

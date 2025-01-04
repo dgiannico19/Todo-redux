@@ -1,9 +1,5 @@
 import { Todo } from '../../models/Todo';
-
-export const ADD_TODO = 'ADD_TODO';
-export const DELETE_TODO = 'DELETE_TODO';
-export const EDIT_MODE = 'EDIT_MODE';
-export const EDIT_TODO = 'EDIT_TODO';
+import { ADD_TODO, DELETE_TODO, EDIT_MODE, EDIT_TODO } from './types';
 
 export const addTodo = (text) => ({
   type: ADD_TODO,

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteTodo, editMod, editTodo } from '../../redux/todo/todoAction';
+import { deleteTodo, editMod, editTodo } from '../../redux/todo/actions';
 import {
   TodoLi,
   EditModeInput,
@@ -29,17 +29,16 @@ const ToDo = ({ todo }) => {
   };
 
   useEffect(() => {
-    if (todo.editMode) {
-      inputRef.current.focus();
-    }
+    if (!todo.editMode) return;
+    inputRef.current.focus();
   }, [todo.editMode]);
 
   return (
     <>
-      <TodoLi
-        style={{
-          backgroundColor: `${todo.color}`,
-        }}
+      <TodoLi backgroundColor={todo.color}
+        // style={{
+        //   backgroundColor: `${todo.color}`,
+        // }}
       >
         {todo.editMode ? (
           <span>
@@ -48,7 +47,7 @@ const ToDo = ({ todo }) => {
               type="text"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              onKeyPress={handlerEditTodo}
+              onKeyDown={handlerEditTodo}
               onBlur={handlerBlur}
             />
           </span>

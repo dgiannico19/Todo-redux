@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-
-//importo estilos
 import {
   TodosForm,
   FormInput,
   FormColor,
   BtnFormAdd,
 } from '../../styles/styled-component/TodoFormStyle';
-import { addTodo } from '../../redux/todo/todoAction';
+import { addTodo } from '../../redux/todo/actions';
+import { palette } from '../../styles/GlobalStyles';
 
 const TodoForm = () => {
   const dispatch = useDispatch();
 
   const [inputValue, setInputValue] = useState({
     description: '',
-    color: 'var(--violeta)',
+    color: palette.violeta,
   });
 
   const { description, color } = inputValue;
@@ -57,20 +56,20 @@ const TodoForm = () => {
           value={color}
         >
           <option
-            style={{ backgroundColor: 'var(--magenta)' }}
-            value="var(--magenta)"
+            style={{ backgroundColor: palette.magenta }}
+            value={palette.magenta}
           ></option>
           <option
-            style={{ backgroundColor: 'var(--verde)' }}
-            value="var(--verde)"
+            style={{ backgroundColor: palette.verde }}
+            value={palette.verde}
           ></option>
           <option
-            style={{ backgroundColor: 'var(--violeta)' }}
-            value="var(--violeta)"
+            style={{ backgroundColor: palette.violeta }}
+            value={palette.violeta}
           ></option>
           <option
-            style={{ backgroundColor: 'var(--mostaza)' }}
-            value="var(--mostaza)"
+            style={{ backgroundColor: palette.mostaza }}
+            value={palette.mostaza}
           ></option>
         </FormColor>
         <BtnFormAdd style={{ placeSelf: 'center' }} type="submit">
