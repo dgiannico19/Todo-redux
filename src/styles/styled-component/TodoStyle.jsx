@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import modify from '../../img/modify.svg';
-import modifyHover from '../../img/modify-hover.svg';
-import deleteSvg from '../../img/delete.svg';
-import deleteHover from '../../img/delete-full.svg';
+import modify from '../../assets/modify.svg';
+import modifyHover from '../../assets/modify-hover.svg';
+import deleteSvg from '../../assets/delete.svg';
+import deleteHover from '../../assets/delete-full.svg';
 
 export const TodoLi = styled.li`
   color: black;
